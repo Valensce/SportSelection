@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+  
+{% block title %}Select Sport{% endblock %}
+  
+{% block content %}
+
+<div class="col-md-8">
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+      <thead>
+        <tr>
+          <td>Sport Name</td>
+          <td>Location</td>
+          <td>Teacher</td>
+          <td>Action</td>
+        </tr>
+      </thead>
+      <tbody>
+          {% for row in list_sports %}
+          <tr>
+            <td>{{row[0]}}</td><!--Displays data from column 1 ([0]) for the current row-->
+            <td>{{row[1]}}</td><!--Displays data from column 2 ([1]) for the current row-->
+            <td>{{row[2]}}</td><!--Displays data from column 3 ([2]) for the current row-->
+            <td>{{row[3]}}</td><!--Displays data from column 4 ([3]) for the current row-->
+            <td width="130">
+              <a href="/selection/{{row[0]}}" class="btn btn-secondary btn-sm">select</a><!--Button to edit the current row-->
+              
+            </td>
+          </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+{% endblock %}

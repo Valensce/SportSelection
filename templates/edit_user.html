@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <h3>Edit User Details</h3>
+        <form action="/edit_user/{{Users.user_id}}" method="POST">
+          <div class="form-group">
+            <input type="text" name="fullname" value="{{Users.fullname}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="username" value="{{Users.username}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="email" value="{{Users.email}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
