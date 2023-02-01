@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Sport Selection App <kbd>DIS_11_FA3</kbd></h1>
+<h1>Sport Selection App <kbd>FA3</kbd></h1>
 </div>
 <h2>Startup</h2>
 
